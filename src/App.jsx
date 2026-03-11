@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import CustomerList from './components/CustomerList';
 import CreateAccountForm from './components/CreateAccountForm';
-// Estos los crearemos a continuación:
-// import TransferMoney from './components/TransferMoney';
-// import TransactionHistory from './components/TransactionHistory';
+import TransferMoney from './components/TransferMoney';
+import TransactionHistory from './components/TransactionHistory';
 
 function App() {
   const [refresh, setRefresh] = useState(0);
@@ -39,17 +38,13 @@ function App() {
 
         {activeTab === 'transfer' && (
           <div>
-            <h2>💸 Transferir Dinero</h2>
-            <p>Próximamente: Componente TransferMoney</p>
-            {/* <TransferMoney onTransferDone={handleRefresh} /> */}
+            <TransferMoney />
           </div>
         )}
 
         {activeTab === 'history' && (
           <div>
-            <h2>📜 Historial de Transacciones</h2>
-            <p>Próximamente: Componente TransactionHistory</p>
-            {/* <TransactionHistory /> */}
+            <TransactionHistory />
           </div>
         )}
       </main>
