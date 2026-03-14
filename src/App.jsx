@@ -13,7 +13,7 @@ function App() {
   return (
     <div style={{ padding: '30px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
       <header style={{ textAlign: 'center', marginBottom: '30px' }}>
-        <h1>Un pequeño banquito, Elio sapa</h1>
+        <h1>Un pequeño banquito</h1>
         <nav>
           <button onClick={() => setActiveTab('customers')} style={tabStyle(activeTab === 'customers')}>
             Clientes
