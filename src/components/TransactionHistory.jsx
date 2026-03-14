@@ -36,11 +36,11 @@ const TransactionHistory = () => {
     };
 
     return (
-        <div style={{ marginTop: '20px' }}>
-            <h2 style={{ textAlign: 'center' }}>Buscador de Historial</h2>
+        <div style={{ marginTop: '20px', padding: '18px', borderRadius: '12px', border: '1px solid #e2e8f0', backgroundColor: '#f9fbff' }}>
+            <h2 style={{ textAlign: 'center', margin: 0, color: '#1f2937' }}>Buscador de Historial</h2>
+            <p style={{ textAlign: 'center', marginTop: '6px', color: '#4b5563' }}>Consulta movimientos por número de cuenta y revisa entradas/salidas.</p>
             
-            {/* Buscador */}
-            <form onSubmit={handleSearch} style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginBottom: '20px' }}>
+            <form onSubmit={handleSearch} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px', marginBottom: '20px' }}>
                 <input 
                     type="text" 
                     placeholder="Ingrese número de cuenta..." 
@@ -54,13 +54,14 @@ const TransactionHistory = () => {
                 </button>
             </form>
 
-            {loading && <p style={{ textAlign: 'center' }}>Buscando...</p>}
-            {error && <p style={{ textAlign: 'center', color: 'red' }}>{error}</p>}
+            {loading && <p style={{ textAlign: 'center', color: '#2563eb' }}>Buscando...</p>}
+            {error && <p style={{ textAlign: 'center', color: '#ef4444' }}>{error}</p>}
 
             {/* Tabla de Resultados */}
             {!loading && !error && hasSearched && (
-                <table border="1" cellPadding="10" style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center' }}>
-                    <thead style={{ backgroundColor: '#ecf0f1' }}>
+                <div style={{ overflowX: 'auto' }}>
+                  <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center', minWidth: '650px' }}>
+                    <thead style={{ backgroundColor: '#1d4ed8', color: 'white' }}>
                         <tr>
                             <th>ID Transacción</th>
                             <th>Fecha y Hora</th>
@@ -95,6 +96,7 @@ const TransactionHistory = () => {
                         )}
                     </tbody>
                 </table>
+              </div>
             )}
         </div>
     );
