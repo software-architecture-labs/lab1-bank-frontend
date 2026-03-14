@@ -56,14 +56,14 @@ const CustomerList = ({ onDeleteSuccess }) => {
     if (error) return <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>;
 
     return (
-        <div style={{ marginTop: '20px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '10px' }}>
-                <h3 style={{ margin: 0 }}>Lista de Clientes Registrados</h3>
-                <span style={{ fontSize: '0.85rem', color: '#4b5563' }}>{customers.length} clientes</span>
+        <div style={{ marginTop: '8px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '6px', marginBottom: '6px' }}>
+                <h3 style={{ margin: 0, fontSize: '1rem' }}>Clientes registrados</h3>
+                <span style={{ fontSize: '0.75rem', color: '#4b5563' }}>{customers.length} clientes</span>
             </div>
 
-            <div style={{ overflowX: 'auto', marginTop: '10px' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '650px', fontSize: '0.95rem' }}>
+            <div style={{ overflowX: 'auto', marginTop: '6px' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '650px', fontSize: '0.88rem' }}>
                     <thead style={{ backgroundColor: '#1d4ed8', color: 'white' }}>
                         <tr>
                             <th style={thStyle}>ID</th>

@@ -36,9 +36,13 @@ const TransactionHistory = () => {
     };
 
     return (
-        <div style={{ marginTop: '20px', padding: '18px', borderRadius: '12px', border: '1px solid #e2e8f0', backgroundColor: '#f9fbff' }}>
-            <h2 style={{ textAlign: 'center', margin: 0, color: '#1f2937' }}>Buscador de Historial</h2>
-            <p style={{ textAlign: 'center', marginTop: '6px', color: '#4b5563' }}>Consulta movimientos por número de cuenta y revisa entradas/salidas.</p>
+        <div style={{ marginTop: '8px', padding: '14px', borderRadius: '12px', border: '1px solid #e2e8f0', backgroundColor: '#f9fbff' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '6px' }}>
+              <div>
+                <h2 style={{ margin: 0, color: '#1f2937', fontSize: '1rem' }}>Historial de movimientos</h2>
+                <p style={{ margin: '4px 0 0', fontSize: '0.82rem', color: '#4b5563' }}>Busca por cuenta para ver entradas y salidas.</p>
+              </div>
+            </div>
             
             <form onSubmit={handleSearch} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px', marginBottom: '20px' }}>
                 <input 
