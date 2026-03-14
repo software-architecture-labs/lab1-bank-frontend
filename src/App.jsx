@@ -32,7 +32,7 @@ function App() {
           <>
             <CreateAccountForm onCustomerCreated={handleRefresh} />
             <hr />
-            <CustomerList key={refresh} />
+            <CustomerList key={refresh} onDeleteSuccess={handleRefresh} />
           </>
         )}
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import api from '../api/axiosConfig';
 
-const CustomerList = () => {
+const CustomerList = ({ onDeleteSuccess }) => {
     const [customers, setCustomers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -14,12 +14,31 @@ const CustomerList = () => {
                 setLoading(false);
             } catch (err) {
                 console.error("Error al obtener clientes:", err);
-                setError('No se pudo conectar con el servidor. Revisa el CORS y que el Backend esté corriendo.');
+                setError('No se pudo conectar con el servidor.');
                 setLoading(false);
             }
         };
         fetchCustomers();
     }, []);
+
+    // funcion para borrar cliente
+    const handleDelete = async (id) => {
+        const confirmDelete = window.confirm("¿Seguro que quieres borrar este cliente?");
+        
+        if (confirmDelete) {
+            try {
+                await api.delete(`/customers/${id}`);
+                alert("Cliente eliminado exitosamente");
+                
+                if (onDeleteSuccess) {
+                    onDeleteSuccess();
+                }
+            } catch (err) {
+                console.error("Error al borrar:", err);
+                alert("No se pudo eliminar el cliente. Verifica que no tenga transacciones.");
+            }
+        }
+    };
 
     if (loading) return <p>Cargando clientes...</p>;
     if (error) return <p style={{ color: 'red' }}>{error}</p>;
@@ -34,20 +53,36 @@ const CustomerList = () => {
                         <th>Nombre Completo</th>
                         <th>Número de Cuenta</th>
                         <th>Saldo Actual</th>
+                        <th style={{ textAlign: 'center' }}>Acción</th> {/* Nueva columna */}
                     </tr>
                 </thead>
                 <tbody>
                     {customers.length === 0 ? (
-                        <tr><td colSpan="4">No hay clientes en la base de datos.</td></tr>
+                        <tr><td colSpan="5">No hay clientes en la base de datos.</td></tr>
                     ) : (
                         customers.map((c) => (
                             <tr key={c.id}>
                                 <td>{c.id}</td>
-                                {/* Concatenamos firstName y lastName del DTO */}
                                 <td>{`${c.firstName} ${c.lastName}`}</td>
                                 <td>{c.accountNumber}</td>
                                 <td style={{ fontWeight: 'bold', color: '#27ae60' }}>
                                     ${c.balance.toLocaleString()}
+                                </td>
+                                <td style={{ textAlign: 'center' }}>
+                                    <button 
+                                        onClick={() => handleDelete(c.id)}
+                                        style={{ 
+                                            backgroundColor: '#e74c3c', 
+                                            color: 'white', 
+                                            border: 'none', 
+                                            padding: '5px 10px', 
+                                            borderRadius: '4px', 
+                                            cursor: 'pointer',
+                                            fontWeight: 'bold'
+                                        }}
+                                    >
+                                        Borrar
+                                    </button>
                                 </td>
                             </tr>
                         ))
