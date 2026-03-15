@@ -37,9 +37,7 @@ function App() {
                   <div>
                     <p style={{ margin: 0, fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', opacity: 0.8 }}>Banco Amigable</p>
                     <h2 style={{ margin: '8px 0 8px', fontSize: '1.6rem' }}>Bienvenido a tu banca digital</h2>
-                    <p style={{ margin: 0, color: '#e2e8f0' }}>Donec sit amet volutpat mauris. Donec dui leo, suscipit vitae ante a, ultrices aliquam leo. 
-                      Nunc hendrerit dignissim justo a sollicitudin. Nunc ultricies sem malesuada, venenatis sapien non, pulvinar nibh. Duis rutrum, libero et auctor cursus,
-                       sem ligula vehicula neque, quis pellentesque orci lacus vitae libero.</p>
+                    <p style={{ margin: 0, color: '#e2e8f0' }}>Transfiere, controla y crece tu dinero con una experiencia práctica y segura.</p>
                   </div>
                   <div style={{ marginTop: '10px', fontSize: '0.75rem', background: 'rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px' }}>
                     <p style={{ margin: 0 }}>✅ 500+ clientes activos</p>
@@ -50,11 +48,11 @@ function App() {
                   <h3 style={{ margin: '0', fontSize: '1rem' }}>Novedades</h3>
                   <div style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '10px', background: '#f8fafc' }}>
                     <h4 style={{ margin: '0 0 4px', fontSize: '0.9rem' }}>Nuevo: Transferencias programadas</h4>
-                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#475569' }}>Sed luctus, ex id dapibus malesuada, tortor nunc tincidunt nunc, ac elementum orci sapien a elit</p>
+                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#475569' }}>Programa envíos automáticos cada semana y olvídate de pendientes.</p>
                   </div>
                   <div style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '10px', background: '#fff7ed' }}>
                     <h4 style={{ margin: '0 0 4px', fontSize: '0.9rem' }}>Promoción</h4>
-                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#844f00' }}>Proin quis arcu quam. Sed ultricies erat ac nulla aliquet, id tincidunt ipsum facilisis.</p>
+                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#844f00' }}>Obtén 0% comisión en las primeras 3 transferencias del mes.</p>
                   </div>
                 </div>
               </div>
@@ -63,16 +61,15 @@ function App() {
                 <div style={{ borderRadius: '12px', border: '1px solid #e2e8f0', padding: '12px', background: 'white' }}>
                   <h3 style={{ margin: '0 0 6px', fontSize: '0.95rem' }}>Datos curiosos</h3>
                   <ul style={{ margin: 0, paddingLeft: '18px', color: '#334155', fontSize: '0.85rem' }}>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                    <li>Vivamus volutpat fermentum justo non posuere.</li>
-                    <li>Donec nulla lectus, pretium non justo at, faucibus tincidunt orci.</li>
+                    <li>En el primer año, más de 1,200 transferencias vía app.</li>
+                    <li>Los clientes menores de 30 años usan la app 3 veces más.</li>
+                    <li>Estabilidad 99.9% y cifrado AES-256.</li>
                   </ul>
                 </div>
                 <div style={{ borderRadius: '12px', border: '1px solid #e2e8f0', padding: '12px', background: '#f9fafb' }}>
                   <h3 style={{ margin: '0 0 6px', fontSize: '0.95rem' }}>Información legal</h3>
                   <p style={{ margin: 0, fontSize: '0.82rem', color: '#334155', lineHeight: '1.4' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat fermentum justo non posuere. Donec nulla lectus, 
-                    pretium non justo at, faucibus tincidunt orci. Nunc eu faucibus purus, id vehicula sapien. Donec vel odio nisi. Nullam molestie sollicitudin turpis,
+                    Esta plataforma es para gestión interna de cuentas. El banco no se responsabiliza por transferencias realizadas con datos incorrectos. Consulta términos y condiciones en el portal.
                   </p>
                 </div>
               </div>
@@ -81,12 +78,12 @@ function App() {
                 <h3 style={{ margin: '0 0 6px', fontSize: '0.95rem' }}>Publicidad</h3>
                 <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                   <div style={{ flex: '1 1 200px', border: '1px dashed #cbd5e1', borderRadius: '10px', padding: '10px', background: '#f0f9ff' }}>
-                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#1d4ed8' }}><b>Pellentesque id fermentum tortor.</b></p>
-                    <p style={{ margin: '4px 0 0', fontSize: '0.76rem', color: '#334155' }}> Suspendisse eget erat quis libero finibus mattis</p>
+                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#1d4ed8' }}><b>¡Abre tu cuenta digital hoy!</b></p>
+                    <p style={{ margin: '4px 0 0', fontSize: '0.76rem', color: '#334155' }}>Rápido, gratis y con alertas en tiempo real.</p>
                   </div>
                   <div style={{ flex: '1 1 200px', border: '1px dashed #d1fae5', borderRadius: '10px', padding: '10px', background: '#ecfdf3' }}>
-                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#15803d' }}><b>Aliquam vitae felis non dolor faucibus imperdiet ac vitae ipsum.</b></p>
-                    <p style={{ margin: '4px 0 0', fontSize: '0.76rem', color: '#334155' }}>Pellentesque et justo mauris. Maecenas mi nunc, dignissim ac luctus quis.</p>
+                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#15803d' }}><b>App Premium</b></p>
+                    <p style={{ margin: '4px 0 0', fontSize: '0.76rem', color: '#334155' }}>Accede a reportes y análisis automáticos por $2.99/mes.</p>
                   </div>
                 </div>
               </div>
